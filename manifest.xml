@@ -8,7 +8,7 @@
   <Description DefaultValue="AI-powered attendance and HR policy assistant. Built by iOCFO Consulting."/>
   <IconUrl DefaultValue="https://prachiiocfo.github.io/Attendance-Chatbot/assets/ailogo-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://prachiiocfo.github.io/Attendance-Chatbot/assets/ailogo-64.png"/>
-  <SupportUrl DefaultValue="https://github.com/Prachliocfo/Attendance-Chatbot"/>
+  <SupportUrl DefaultValue="https://github.com/Prachiiocfo/Attendance-Chatbot"/>
   <AppDomains>
     <AppDomain>https://prachiiocfo.github.io</AppDomain>
   </AppDomains>
@@ -16,7 +16,7 @@
     <Host Name="Workbook"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://prachiiocfo.github.io/Attendance-Chatbot/taskpane.html"/>
+    <SourceLocation DefaultValue="https://prachiiocfo.github.io/Attendance-Chatbot/src/taskpane/taskpane.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -67,9 +67,9 @@
         <bt:Image id="Icon.80x80" DefaultValue="https://prachiiocfo.github.io/Attendance-Chatbot/assets/ailogo-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/Prachliocfo/Attendance-Chatbot"/>
-        <bt:Url id="Commands.Url" DefaultValue="https://prachiiocfo.github.io/Attendance-Chatbot/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://prachiiocfo.github.io/Attendance-Chatbot/taskpane.html"/>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/Prachiiocfo/Attendance-Chatbot"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://prachiiocfo.github.io/Attendance-Chatbot/src/commands/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://prachiiocfo.github.io/Attendance-Chatbot/src/taskpane/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Attendance Chatbot - iOCFO"/>
