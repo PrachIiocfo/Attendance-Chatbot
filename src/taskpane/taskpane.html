@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iOCFO Assistant</title>
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #f4f8fd;
+            color: #042c53;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: #0c447c;
+            padding: 13px 16px;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+        .logo {
+            width: 28px; height: 28px; border-radius: 6px;
+            background: #185fa5; color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; font-weight: 700;
+        }
+        .header .title { color: #fff; font-size: 13px; font-weight: 600; }
+        .header .sub { color: #85b7eb; font-size: 10.5px; }
+
+        .chat {
+            flex: 1; overflow-y: auto; padding: 14px;
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .msg {
+            max-width: 88%; padding: 9px 12px; font-size: 13px;
+            line-height: 1.5; white-space: pre-wrap; word-wrap: break-word;
+        }
+        .bot {
+            align-self: flex-start; background: #e6f1fb; color: #042c53;
+            border-radius: 4px 12px 12px 12px;
+        }
+        .user {
+            align-self: flex-end; background: #185fa5; color: #fff;
+            border-radius: 12px 4px 12px 12px;
+        }
+        .thinking {
+            align-self: flex-start; background: #e6f1fb; color: #5b7da5;
+            padding: 9px 12px; border-radius: 4px 12px 12px 12px; font-size: 13px;
+        }
+
+        .footer { padding: 11px 12px; border-top: 0.5px solid #dbe7f5; background: #fff; }
+        .suggestions { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 9px; }
+        .chip {
+            background: #eef4fb; color: #185fa5; border: 0.5px solid #cfe0f4;
+            border-radius: 14px; padding: 5px 11px; font-size: 11.5px; cursor: pointer;
+        }
+        .chip:hover { background: #dceafa; }
+        .input-row { display: flex; gap: 8px; }
+        #question {
+            flex: 1; background: #f4f8fd; border: 0.5px solid #cfe0f4;
+            border-radius: 8px; padding: 10px 12px; color: #042c53;
+            font-size: 13px; outline: none; font-family: inherit;
+        }
+        #question:focus { border-color: #185fa5; }
+        #send {
+            background: #185fa5; color: #fff; border: none; border-radius: 8px;
+            padding: 0 16px; font-size: 15px; font-weight: 600; cursor: pointer;
+        }
+        #send:disabled { background: #9bb6d6; cursor: default; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">iO</div>
+        <div>
+            <div class="title">iOCFO Assistant</div>
+            <div class="sub">Attendance &amp; Policy</div>
+        </div>
+    </div>
+
+    <div class="chat" id="chat">
+        <div class="msg bot">Hi! I can answer questions about your attendance sheet and HR policies. Try "Who was late most often?" or "How many casual leaves do we get?"</div>
+    </div>
+
+    <div class="footer">
+        <div class="suggestions">
+            <span class="chip">Who was late most often?</span>
+            <span class="chip">Compare average working hours</span>
+            <span class="chip">What is the leave policy?</span>
+            <span class="chip">Who took the most leaves?</span>
+        </div>
+        <div class="input-row">
+            <input type="text" id="question" placeholder="Ask about the sheet or policy..." />
+            <button id="send">&#10148;</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="taskpane.js"></script>
+</body>
+</html>
